@@ -53,7 +53,7 @@ if (!("reshape2" %in% rownames(installed.packages())) ) {
         ##Combine the test data and the train data into one dataframe
         all_data <- rbind(train_data,test_data)
         
-        ##Keep only columns refering to mean() or std() values
+        ##Keep only columns referring to mean() or std() values
         mean_col_idx <- grep("mean",names(all_data),ignore.case=TRUE)
         mean_col_names <- names(all_data)[mean_col_idx]
         std_col_idx <- grep("std",names(all_data),ignore.case=TRUE)
